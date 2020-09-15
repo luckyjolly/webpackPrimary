@@ -1,11 +1,11 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');//在输出文件夹生产html并引入打包后的css和js
 const webpack = require('webpack');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
-const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');//打包开始时，清空输出文件夹
+const CopyWebpackPlugin = require('copy-webpack-plugin');//复制指定文件夹下内容，其内容不做处理
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');//提取js引入的css到单独的文件里，并保存到输出路径下
+const TerserWebpackPlugin = require('terser-webpack-plugin');//压缩js
+const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');//压缩提取后的css
 
 const config = {
   mode: 'production',
